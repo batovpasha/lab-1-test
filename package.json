@@ -1,0 +1,32 @@
+{
+  "name": "lab-1-test",
+  "version": "1.0.0",
+  "description": "Testing lab",
+  "main": "index.js",
+  "scripts": {
+    "start": "node start.js",
+    "lint": "eslint .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/batovpasha/lab-1-test.git"
+  },
+  "author": "Pavel Batov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/batovpasha/lab-1-test/issues"
+  },
+  "homepage": "https://github.com/batovpasha/lab-1-test#readme",
+  "devDependencies": {
+    "eslint": "^5.14.1",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0"
+  },
+  "dependencies": {
+    "eslint-config-standart": "^0.2.0"
+  }
+}
