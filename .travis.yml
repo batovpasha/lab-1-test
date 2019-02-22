@@ -2,7 +2,7 @@ language: node_js
   - 10
 cache: npm
 before_script:
-  - npm ci
+  - npm i
   - npm run lint
   - npm test
 script:
