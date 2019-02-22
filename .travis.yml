@@ -1,5 +1,6 @@
 language: node_js
 before_script:
+  - echo /node_modules > .eslintignore
   - npm run lint
   - npm test
 script:
