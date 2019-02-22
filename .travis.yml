@@ -6,5 +6,5 @@ before_script:
   - npm run lint
   - npm test
 script:
-  - npm deploy
+  - npm run deploy
   - npm start
