@@ -1,1 +1,1 @@
-console.log("Everything is correct!");
+console.log('Everything is correct!')
