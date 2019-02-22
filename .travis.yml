@@ -1,6 +1,4 @@
 language: node_js
-before_install:
-  - echo /node_modules > .eslintignore
 before_script:
   - npm run lint
   - npm test
