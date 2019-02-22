@@ -2,6 +2,7 @@ language: node_js
 before_script:
   - npm run lint
   - npm test
+  - echo $TRAVIS_BRANCH
 script:
   - npm deploy
   - npm start
