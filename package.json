@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node start.js",
-    "lint": "eslint .",
+    "lint": "npm run lint",
     "test": "node test.js"
   },
   "repository": {
@@ -19,7 +19,6 @@
   },
   "homepage": "https://github.com/batovpasha/lab-1-test#readme",
   "devDependencies": {
-    "eslint": "^5.14.1",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-node": "^8.0.1",
@@ -27,6 +26,7 @@
     "eslint-plugin-standard": "^4.0.0"
   },
   "dependencies": {
+    "eslint": "^5.14.1",
     "eslint-config-standart": "^0.2.0"
   }
 }
