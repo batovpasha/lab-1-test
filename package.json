@@ -19,7 +19,9 @@
     "url": "https://github.com/batovpasha/lab-1-test/issues"
   },
   "homepage": "https://github.com/batovpasha/lab-1-test#readme",
-  "dependencies": {},
+  "dependencies": {
+    "now": "^14.0.0"
+  },
   "devDependencies": {
     "eslint": "^5.14.1",
     "eslint-config-google": "^0.12.0"
