@@ -1,7 +1,7 @@
 {
   "name": "lab-1-test",
   "version": "1.0.0",
-  "description": "Testing lab for creating working env",
+  "description": "Testing lab for creating working environment",
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
