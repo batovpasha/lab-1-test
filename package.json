@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint .",
     "test": "node tests.js",
-    "deploy": "now alias -t $TOKEN $(echo $(now deploy -t $TOKEN)) lab-1-test-$TRAVIS_BRANCH && echo $TRAVIS_BRANCH",
+    "deploy": "now alias --token $TOKEN $(echo $(now deploy --token $TOKEN)) lab-1-test-$TRAVIS_BRANCH && echo $TRAVIS_BRANCH",
     "start": "node index.js"
   },
   "repository": {
