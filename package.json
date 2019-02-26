@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
-    "test": "node tests.js",
+    "test": "node test/*",
     "deploy": "now alias --token $TOKEN $(echo $(now deploy --token $TOKEN)) lab-1-test-$TRAVIS_BRANCH && echo $TRAVIS_BRANCH",
     "start": "node index.js"
   },
