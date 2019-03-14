@@ -4,7 +4,7 @@ const http = require('http');
 
 const PORT = 8000;
 
-const proxyServer = http.createServer((clientReq, clientRes) => {
+const httpProxyServer = http.createServer((clientReq, clientRes) => {
   const options = {
     hostname: clientReq.headers.host,
     path: clientReq.url,
@@ -19,4 +19,4 @@ const proxyServer = http.createServer((clientReq, clientRes) => {
   clientReq.pipe(proxyRequest, { end: true });
 });
 
-proxyServer.listen(PORT);
+httpProxyServer.listen(PORT);
