@@ -12,7 +12,6 @@ const httpProxyServer = http.createServer((clientReq, clientRes) => {
   };
 
   const proxyRequest = http.request(options, (serverRes) => {
-    clientRes.headers = serverRes.headers;
     serverRes.pipe(clientRes, { end: true });
   });
 
