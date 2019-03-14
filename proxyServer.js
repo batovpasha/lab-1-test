@@ -11,12 +11,12 @@ const proxyServer = http.createServer((clientReq, clientRes) => {
     method: clientReq.method
   };
 
-  const proxy = http.request(options, (serverRes) => {
-    serverRes.pipe(clientRes, { end: true });
+  const proxyRequest = http.request(options, (serverRes) => {
     clientRes.headers = serverRes.headers;
+    serverRes.pipe(clientRes, { end: true });
   });
 
-  clientReq.pipe(proxy, { end: true });
+  clientReq.pipe(proxyRequest, { end: true });
 });
 
 proxyServer.listen(PORT);
