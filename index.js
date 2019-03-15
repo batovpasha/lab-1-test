@@ -5,7 +5,6 @@ const http = require('http');
 const PORT = 8000;
 
 const httpProxyServer = http.createServer((clientReq, clientRes) => {
-
   const options = {
     hostname: clientReq.headers.host,
     path: clientReq.url,
