@@ -1,6 +1,7 @@
 'use strict';
 
 const http = require('http');
+const https = require('https');
 
 const PORT = 8000;
 
@@ -11,9 +12,17 @@ const httpProxyServer = http.createServer((clientReq, clientRes) => {
     method: clientReq.method
   };
 
-  const proxyRequest = http.request(options, (serverRes) => {
-    serverRes.pipe(clientRes, { end: true });
-  });
+  let proxyRequest;
+
+  if (clientReq.connection.encrypted) {
+    proxyRequest = https.request(options, (serverRes) => {
+      serverRes.pipe(clientRes, { end: true });
+    });
+  } else {
+    proxyRequest = http.request(options, (serverRes) => {
+      serverRes.pipe(clientRes, { end: true });
+    });
+  }
 
   clientReq.pipe(proxyRequest, { end: true });
 });
