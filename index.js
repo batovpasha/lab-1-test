@@ -6,6 +6,8 @@ const https = require('https');
 const PORT = 8000;
 
 const httpProxyServer = http.createServer((clientReq, clientRes) => {
+  const protocol = clientReq.url.split(':')[0];
+
   const options = {
     hostname: clientReq.headers.host,
     path: clientReq.url,
@@ -14,7 +16,7 @@ const httpProxyServer = http.createServer((clientReq, clientRes) => {
 
   let proxyRequest;
 
-  if (clientReq.connection.encrypted) {
+  if (protocol === 'https') {
     proxyRequest = https.request(options, (serverRes) => {
       serverRes.pipe(clientRes, { end: true });
     });
