@@ -8,8 +8,6 @@ const PORT = 8000;
 const httpProxyServer = http.createServer((clientReq, clientRes) => {
   const protocol = clientReq.url.startsWith('https') ? https : http;
 
-  console.log(clientReq.url);
-
   const options = {
     headers: clientReq.headers,
     method: clientReq.method
